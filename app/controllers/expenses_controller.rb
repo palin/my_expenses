@@ -1,8 +1,12 @@
 class ExpensesController < ApplicationController
 
-  before_filter :require_logged_user, only: [:index]
+  before_filter :require_logged_user
 
   def index
+  end
+
+  def new
+    @expense = Expense.new
   end
 
   private
