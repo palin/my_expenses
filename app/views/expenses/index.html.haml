@@ -1,16 +1,5 @@
 .expenses
-  %nav.navbar{:role => "navigation"}
-    .container
-      .avatar-name
-        %p #{image_tag "http://graph.facebook.com/#{current_user.uid}/picture"} #{current_user.name}
-      %ul.menu
-        %li
-          .new-expenses-link
-            = image_tag "list_add.png", alt: "Add new expenses", width: 20
-            = link_to "Add new expenses", new_expense_path
-        %li= render partial: 'partials/logout'
+  = render partial: 'partials/navbar'
   %header
-    %h1 My expenses list
-
-  .new-expenses-container
-
+    %h3 My expenses list
+  .all-expenses-container
