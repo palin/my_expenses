@@ -10,9 +10,11 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    current_user.expenses.create(expense_params)
-
-    redirect_to new_expense_path
+    if current_user.expenses.create(expense_params)
+      redirect_to new_expense_path
+    else
+      render :new
+    end
   end
 
   private
