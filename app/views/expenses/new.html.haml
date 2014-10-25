@@ -3,3 +3,8 @@
   %header
     %h3 Add new expenses
   .new-expenses-container
+    = form_for @expense do |f|
+      = f.text_field :name, placeholder: 'Name'
+      = f.datetime_field :payed_at, placeholder: 'Payed at'
+      = f.hidden_field :user_id, value: current_user.id
+      = f.submit
