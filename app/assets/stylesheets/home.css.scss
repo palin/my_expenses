@@ -3,9 +3,56 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background: #42bd41;
-  font-family: 'Merriweather Sans', sans-serif;
-  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registration-box {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.info-box {
+  width: 100%;
+  height: 500px;
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)), asset-url('report_folder.jpg') no-repeat); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  background-size: cover;
+  ul {
+    li {
+      font-style: italic;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .content {
+    padding: 50px;
+  }
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 700;
+}
+h3 {
+  margin-top: 30px;
+  font-size: 46px;
+  font-style: italic;
+}
+
+header {
+  padding: 50px 0;
+}
+
+.home_roof {
+  width: 130px;
+  position: relative;
+  left: 322px;
+  top: 35px;
 }
 
 .navbar {
@@ -13,6 +60,29 @@ body {
   background: #72d572;
 }
 
-header {
-  text-align: center;
+.btn {
+  background: #627aad;
+  background-image: -webkit-linear-gradient(top, #627aad, #3b5998);
+  background-image: -moz-linear-gradient(top, #627aad, #3b5998);
+  background-image: -ms-linear-gradient(top, #627aad, #3b5998);
+  background-image: -o-linear-gradient(top, #627aad, #3b5998);
+  background-image: linear-gradient(to bottom, #627aad, #3b5998);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+}
+
+.btn:hover, .btn.hovered {
+  background: #3b5898;
+  background-image: -webkit-linear-gradient(top, #3b5898, #627aad);
+  background-image: -moz-linear-gradient(top, #3b5898, #627aad);
+  background-image: -ms-linear-gradient(top, #3b5898, #627aad);
+  background-image: -o-linear-gradient(top, #3b5898, #627aad);
+  background-image: linear-gradient(to bottom, #3b5898, #627aad);
+  color: #fff;
+  text-decoration: none;
 }

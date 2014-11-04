@@ -1,5 +1,31 @@
 .home
-  %header
-    %h1 My expenses
-    %p Login with your Facebook account and save your daily expenses
-    = link_to "LOGIN WITH FACEBOOK", '/auth/facebook'
+  .registration-box
+    %header
+      .header_with_img
+        = image_tag "roof.png", class: 'home_roof'
+        %h1 Daily Expenses
+      %h3 Save them here!
+    .new-expenses-container
+      = simple_form_for @expense do |f|
+        %table
+          %tr
+            %td= f.input :payed_at, as: :string, placeholder: 'Payed at', label: false, input_html: { value: '2014-10-27' }
+            %td= f.input :name, placeholder: 'Name of expense', label: false
+            %td= f.input :price, placeholder: 'Cost', label: false
+    = link_to "Login with Facebook", '/auth/facebook', class: 'btn'
+
+  .info-box
+
+    / .content
+    /   %h3 If you want to...
+    /   %ul
+    /     %li have transparency in your spendings
+    /     %li keep a history of your expenses
+    /     %li split your expenses between other house residents
+    /     %li remind them about payments
+
+    / %p
+    /   invite residents of your home - let them know about expenses
+    /   split expenses - everyone pays the same!
+    /   send reminders and make others pay - get your money back!
+    /   your expenses become transparent - see how much you spend every week, month or even a year!
