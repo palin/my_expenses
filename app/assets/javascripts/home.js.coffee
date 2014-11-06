@@ -30,13 +30,13 @@ DE.Home =
     window.setTimeout ->
       $('#expense_payed_at').typetype(DE.Home.dates()[counter], {
         e: 0
-        t: 150
+        t: 100
         callback: -> $('#expense_name').typetype(DE.Home.names()[counter], {
           e: 0
-          t: 150
+          t: 100
           callback: -> $('#expense_price').typetype(DE.Home.prices()[counter], {
             e: 0
-            t: 150
+            t: 100
             callback: ->
               window.setTimeout(->
                 DE.Home.clearInputs()
