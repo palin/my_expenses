@@ -1,6 +1,9 @@
-.top-nav
+%nav.navbar
   = link_to "Daily Expenses", root_path, class: 'homepage'
-  = link_to "Log In", '/auth/facebook', class: 'login'
+  - if current_user.present?
+    = link_to "Dashboard", '/expenses/new', class: 'login'
+  - else
+    = link_to "Log In", '/auth/facebook', class: 'login'
 .main-content
   %header
     %h1 Be transparent with your expenses
