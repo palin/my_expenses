@@ -3,13 +3,23 @@ nav.navbar {
   border-bottom: 1px solid #ddd;
   background: #fff;
 
+  .navbar-collapse {
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.5);
+  }
+
   li {
     padding: 10px 0;
 
     img {
-      width: 15px;
+      width: 22px;
       margin-top: -4px;
       margin-right: 10px;
+    }
+
+    a {
+      background: #eee;
     }
   }
   .login {
