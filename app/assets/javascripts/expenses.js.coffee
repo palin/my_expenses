@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+DE.Expenses =
+  execute: ->
+    DE.Expenses.setDefaultDateFormar()
+    DE.Expenses.disableSubmit()
+
+  setDefaultDateFormar: ->
+    $('#expense_payed_at').datepicker(dateFormat: "yy-mm-dd")
+
+  disableSubmit: ->
+    $('form').submit ->
+      $('input[type=submit]').attr('disabled', true).val('Saving...')

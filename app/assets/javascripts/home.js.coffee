@@ -1,8 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+DE.Home =
+  execute: ->
+    DE.Home.examplesLoop(0)
 
-window.Expenses =
   clearInputs: ->
     $('input[type=text], input[type=number]').val('')
 
@@ -12,10 +11,10 @@ window.Expenses =
     date = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
 
   dates: ->
-    oneMonthAgo = Expenses.friendlyDate(30)
-    twoDaysAgo = Expenses.friendlyDate(2)
-    yesterday = Expenses.friendlyDate(1)
-    today = Expenses.friendlyDate(0)
+    oneMonthAgo = DE.Home.friendlyDate(30)
+    twoDaysAgo = DE.Home.friendlyDate(2)
+    yesterday = DE.Home.friendlyDate(1)
+    today = DE.Home.friendlyDate(0)
 
     [oneMonthAgo, twoDaysAgo, yesterday, today]
 
@@ -27,26 +26,23 @@ window.Expenses =
 
   examplesLoop: (counter)->
     counter = 0 if counter > 2
-    Expenses.clearInputs()
+    DE.Home.clearInputs()
     window.setTimeout ->
-      $('#expense_payed_at').typetype(Expenses.dates()[counter], {
+      $('#expense_payed_at').typetype(DE.Home.dates()[counter], {
         e: 0
         t: 150
-        callback: -> $('#expense_name').typetype(Expenses.names()[counter], {
+        callback: -> $('#expense_name').typetype(DE.Home.names()[counter], {
           e: 0
           t: 150
-          callback: -> $('#expense_price').typetype(Expenses.prices()[counter], {
+          callback: -> $('#expense_price').typetype(DE.Home.prices()[counter], {
             e: 0
             t: 150
             callback: ->
               window.setTimeout(->
-                Expenses.clearInputs()
-                Expenses.examplesLoop(counter + 1)
+                DE.Home.clearInputs()
+                DE.Home.examplesLoop(counter + 1)
               , 1000)
             });
           });
         });
     , 1000
-
-$(document).ready ->
-  Expenses.examplesLoop(0) if $('body.home_index').length > 0
