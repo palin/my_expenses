@@ -1,50 +1,41 @@
-// Place all the styles related to the Expenses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.table {
+  width: 525px;
+  color: #000;
+}
 
-
-  .avatar-name {
-    img {
-      border-radius: 50%;
-      width: 30px;
-    }
+.home {
+  table {
+    margin: -30px auto 50px;
   }
-  .logout {
-    img { width: 15px; }
-  }
-
-  .table {
-    width: 525px;
-    color: #000;
-  }
-
-  .home {
-    table {
-      margin: -30px auto 50px;
-    }
-    input {
-      margin-right: 10px;
-    }
-    input[type='submit'] {
-      padding: 5px 15px;
-      margin-top: 5px;
-      margin-left: 10px;
-      background: #62AD6B;
-      background-image: -webkit-linear-gradient(top, #62AD6B, #3B9847);
-      background-image: -moz-linear-gradient(top, #62AD6B, #3B9847);
-      background-image: -ms-linear-gradient(top, #62AD6B, #3B9847);
-      background-image: -o-linear-gradient(top, #62AD6B, #3B9847);
-      background-image: linear-gradient(to bottom, #62AD6B, #3B9847);
-    }
-  }
-
   input {
-    padding: 10px;
-    font-size: 18px;
-    &#expense_payed_at {
-      width: 140px;
-    }
-    &#expense_price {
-      width: 140px;
-    }
+    margin-right: 10px;
   }
+  input[type='submit'] {
+    padding: 5px 15px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background: #62AD6B;
+    background-image: -webkit-linear-gradient(top, #62AD6B, #3B9847);
+    background-image: -moz-linear-gradient(top, #62AD6B, #3B9847);
+    background-image: -ms-linear-gradient(top, #62AD6B, #3B9847);
+    background-image: -o-linear-gradient(top, #62AD6B, #3B9847);
+    background-image: linear-gradient(to bottom, #62AD6B, #3B9847);
+  }
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  &#expense_payed_at {
+    width: 140px;
+  }
+  &#expense_price {
+    width: 140px;
+  }
+}
+
+body.expenses {
+  header {
+    margin-left: 20px;
+  }
+}
