@@ -45,6 +45,18 @@ group :development, :test do
   gem 'pry'
   gem 'pry-debugger'
 end
+
+group :test do
+  gem 'webmock', '~> 1.11.0'
+  gem 'factory_girl_rails', require: false
+  gem 'rspec-prof'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'timecop'
+  gem 'rspec-rails'
+  gem 'rspec-instafail'
+  gem 'progress_bar'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
