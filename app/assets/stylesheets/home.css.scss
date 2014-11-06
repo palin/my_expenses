@@ -1,24 +1,90 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.registration-box {
-  padding-bottom: 50px;
+.top-nav {
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+
+  .login {
+    float: right;
+    margin-right: 20px;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #b2b2b2;
+  }
+
+  .homepage {
+    float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #b2b2b2;
+  }
+}
+
+.main-content {
   text-align: center;
+
+  h1 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 35px;
+  }
+  h3 {
+    margin-top: 19px;
+    font-size: 16px;
+    color: #666;
+  }
+  h4 {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #999;
+  }
+  header {
+    padding: 0 10px;
+  }
+}
+
+.new-expenses-container {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background: #ddd;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  form {
+    padding: 0 15px;
+
+    table {
+      margin: 0 auto;
+
+      td {
+        width: 100%;
+        margin-bottom: 5px;
+        float: left;
+      }
+
+      input {
+        background: #eee;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        color: #666;
+        padding: 5px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
 }
 .info-box {
   width: 100%;
-  height: 500px;
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)), asset-url('report_folder.jpg') no-repeat); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%), asset-url('report_folder.jpg') no-repeat; /* W3C */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
   background-size: cover;
   ul {
@@ -32,27 +98,6 @@ body {
   .content {
     padding: 50px;
   }
-}
-
-h1 {
-  font-size: 96px;
-  font-weight: 700;
-}
-h3 {
-  margin-top: 30px;
-  font-size: 46px;
-  font-style: italic;
-}
-
-header {
-  padding: 50px 0;
-}
-
-.home_roof {
-  width: 130px;
-  position: relative;
-  left: 322px;
-  top: 35px;
 }
 
 .navbar {

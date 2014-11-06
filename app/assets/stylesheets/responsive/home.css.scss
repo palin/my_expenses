@@ -1,0 +1,63 @@
+// RESPONSIVE STYLES
+@media only all and (min-width:599px) {
+  .top-nav {
+    height: 70px;
+
+    .login {
+      margin-top: 25px;
+    }
+    .homepage {
+      margin-top: 25px;
+    }
+  }
+  .main-content {
+    header {
+      padding: 30px 0;
+    }
+    h1 {
+      font-size: 100px;
+      line-height: 90px;
+    }
+    h3 {
+      font-size: 40px;
+    }
+    h4 {
+      margin-left: 368px;
+      font-size: 18px;
+    }
+  }
+  .new-expenses-container {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 20px 0;
+
+    form {
+      padding: 0;
+
+      table {
+
+        td {
+          width: auto;
+          margin-bottom: 0;
+          float: none;
+        }
+
+        input {
+          margin-right: 10px;
+          padding: 10px;
+          font-size: 18px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media only all and (min-width:599px) and (max-width:1024px) {
+  .main-content {
+    h1 {
+      font-size: 55px;
+      line-height: 60px;
+    }
+  }
+}
