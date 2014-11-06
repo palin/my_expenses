@@ -1,15 +1,11 @@
 = render partial: 'partials/navbar'
 %header
   %h3 New expense
-.new-expenses-container
+.new-expense
   = simple_form_for @expense do |f|
     %table.table.table-condensed
       %tr
-        %td= f.input :payed_at, as: :string, placeholder: 'Payed at', label: false, input_html: { value: '2014-10-27' }
-        %td= f.input :name, placeholder: 'Name of expense', label: false
-        %td= f.input :price, placeholder: 'Cost', label: false
-        = f.input :user_id, as: :hidden, value: current_user.id
-        %td= f.button :submit, value: 'Save it!'
-
-:javascript
-  $('#expense_payed_at').datepicker({ dateFormat: "yy-mm-dd" });
+        %td.payed_at= f.input :payed_at, as: :string, placeholder: 'Payed at', label: false, input_html: { value: Date.today.strftime }
+        %td.price= f.input :price, placeholder: 'Cost', label: false
+        %td.name= f.input :name, placeholder: 'Name of expense', label: false
+        %td.save= f.button :submit, value: 'Save it!'
