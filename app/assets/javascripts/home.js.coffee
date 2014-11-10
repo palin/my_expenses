@@ -57,5 +57,5 @@ DE.Home =
   scrollToElement: (el)->
     speed = 600
     $('html,body').animate
-      scrollTop: $(".#{el}").offset().top
+      scrollTop: $(".#{el}").offset().top - 30
     , speed
