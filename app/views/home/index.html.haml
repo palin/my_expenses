@@ -1,9 +1,9 @@
 %nav.navbar
-  = link_to "daily expenses", root_path, class: 'homepage'
+  = link_to 'daily expenses', root_path, class: 'homepage'
   - if current_user.present?
-    = link_to "Dashboard", '/expenses/new', class: 'login'
+    = link_to 'Dashboard', '/expenses/new', class: 'login'
   - else
-    = link_to "log in", '/auth/facebook', class: 'login'
+    = link_to 'log in', '/auth/facebook', class: 'login'
 .main-content
   %header
     %h1 Be transparent with your expenses
@@ -17,38 +17,28 @@
           %td= f.input :payed_at, as: :string, placeholder: 'Date', label: false, input_html: { value: '2014-10-27' }
           %td= f.input :name, placeholder: 'Name of expense', label: false
           %td= f.input :price, placeholder: 'Cost', label: false
-  = link_to "Sign Up Free", '/auth/facebook', class: 'btn'
+  = link_to 'Sign Up Free', '/auth/facebook', class: 'btn'
   .go-to-next-line{'data-to' => 'more-info-first'}
     %p more
-    = image_tag "arrow_down.png"
+    = image_tag 'arrow_down.png'
   .more-info-first
     %h1 Keep a history of your expenses
     %ul
-      %li have transparency in your spendings
-      %li keep a history of your expenses
-      %li split your expenses between other house residents
-      %li remind them about payments
+      %li provide a date, a cost and a name for each expense
+      %li browse and filter your list
+      %li see how much you spend every week, month or even a year!
   .go-to-next-line{'data-to' => 'more-info-second'}
     %p more
-    = image_tag "arrow_down.png"
+    = image_tag 'arrow_down.png'
   .more-info-second
     %h1 Create group's expenses
     %ul
       %li invite your friends, house residents, clients
       %li split your expenses
       %li calculate who should pay and how much
-      %li send reminders if you want your money back
-
-  / .content
-  /   %h1 If you want to...
-  / %ul
-  /   %li have transparency in your spendings
-  /   %li keep a history of your expenses
-  /   %li split your expenses between other house residents
-  /   %li remind them about payments
-
-  / %p
-  /   invite residents of your home - let them know about expenses
-  /   split expenses - everyone pays the same!
-  /   send reminders and make others pay - get your money back!
-  /   your expenses become transparent - see how much you spend every week, month or even a year!
+      %li send them email reminders if you want your money back
+%footer
+  %p
+    All rights reserved for
+    = link_to 'daily expenses', root_path, class: 'homepage'
+    2014
