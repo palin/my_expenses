@@ -1,6 +1,7 @@
 DE.Home =
   execute: ->
     DE.Home.examplesLoop(0)
+    DE.Home.handleNextLineClick()
 
   clearInputs: ->
     $('input[type=text], input[type=number]').val('')
@@ -46,3 +47,15 @@ DE.Home =
           });
         });
     , 1000
+
+  handleNextLineClick: ->
+    $('.go-to-next-line').click (e)->
+      to = $(e.currentTarget).data('to')
+      DE.Home.scrollToElement(to)
+
+
+  scrollToElement: (el)->
+    speed = 600
+    $('html,body').animate
+      scrollTop: $(".#{el}").offset().top
+    , speed
