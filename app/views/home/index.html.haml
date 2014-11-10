@@ -1,14 +1,15 @@
 %nav.navbar
-  = link_to "Daily Expenses", root_path, class: 'homepage'
+  = link_to "daily expenses", root_path, class: 'homepage'
   - if current_user.present?
     = link_to "Dashboard", '/expenses/new', class: 'login'
   - else
-    = link_to "Log In", '/auth/facebook', class: 'login'
+    = link_to "log in", '/auth/facebook', class: 'login'
 .main-content
   %header
     %h1 Be transparent with your expenses
-    %h3 Bills? Shopping? Holidays?
-    %h4 You Can Store It All Here - For free.
+    %h3
+      Bills? Shopping? Holidays?
+      %br You can store it all here - for free.
   .new-expenses-container
     = simple_form_for @expense do |f|
       %table
@@ -17,16 +18,34 @@
           %td= f.input :name, placeholder: 'Name of expense', label: false
           %td= f.input :price, placeholder: 'Cost', label: false
   = link_to "Sign Up Free", '/auth/facebook', class: 'btn'
-
-.info-box
+  .go-to-next-line{'data-to' => 'more-info-first'}
+    %p more
+    = image_tag "arrow_down.png"
+  .more-info-first
+    %h1 Keep a history of your expenses
+    %ul
+      %li have transparency in your spendings
+      %li keep a history of your expenses
+      %li split your expenses between other house residents
+      %li remind them about payments
+  .go-to-next-line{'data-to' => 'more-info-second'}
+    %p more
+    = image_tag "arrow_down.png"
+  .more-info-second
+    %h1 Create group's expenses
+    %ul
+      %li invite your friends, house residents, clients
+      %li split your expenses
+      %li calculate who should pay and how much
+      %li send reminders if you want your money back
 
   / .content
-  /   %h3 If you want to...
-  /   %ul
-  /     %li have transparency in your spendings
-  /     %li keep a history of your expenses
-  /     %li split your expenses between other house residents
-  /     %li remind them about payments
+  /   %h1 If you want to...
+  / %ul
+  /   %li have transparency in your spendings
+  /   %li keep a history of your expenses
+  /   %li split your expenses between other house residents
+  /   %li remind them about payments
 
   / %p
   /   invite residents of your home - let them know about expenses
