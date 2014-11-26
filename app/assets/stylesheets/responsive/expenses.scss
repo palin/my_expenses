@@ -1,0 +1,45 @@
+@media only all and (min-width:599px) {
+  body.expenses {
+
+    nav.navbar  {
+      .homepage {
+        margin: 24px 5px;
+      }
+
+      .navbar-collapse {
+        box-shadow: none;
+      }
+
+      ul {
+        float: right;
+      }
+
+      li {
+        padding: 0;
+
+        a {
+          background: none;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &.index {
+      thead {
+        background: rgba(210, 210, 210, 0.5);
+      }
+      td.edit, td.delete {
+        text-align: right;
+      }
+      td.edit {
+        background: rgba(91, 192, 222, 0.15);
+      }
+      td.delete {
+        background: rgba(217, 83, 79, 0.15);
+      }
+    }
+  }
+}
