@@ -1,5 +1,27 @@
 .expenses
   = render partial: 'partials/navbar'
-  %header
-    %h3 My expenses
-  .all-expenses
+  .index-expenses.container
+    %header.row
+      %h3.col-xs-12 My expenses
+
+    %table.table.table-bordered.table-hover.row
+      %thead
+        %th #
+        %th Payed at
+        %th Price
+        %th Name
+        %th Description
+        %th Category
+        %th Added at
+
+      - @expenses.each_with_index do |ex, i|
+        %tr
+          %td= i + 1
+          %td= ex.payed_at.to_date
+          %td= ex.price
+          %td= ex.name
+          %td= ex.description
+          %td= ex.category.name if ex.category
+          %td= ex.created_at.strftime("%Y-%m-%d %H:%M")
+          %td.edit= link_to "Edit", edit_expense_path(ex), class: 'btn btn-info'
+          %td.delete= link_to "Delete", expense_path(ex), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
