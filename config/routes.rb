@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'auth/facebook/callback', to: 'sessions#create'
   delete 'sessions/destroy', to: 'sessions#destroy'
 
-  resources :expenses, only: [:index, :new, :create, :edit, :update]
+  resources :expenses, only: [:index, :new, :create, :edit, :update, :destroy]
 
   root to: 'home#index'
 end
