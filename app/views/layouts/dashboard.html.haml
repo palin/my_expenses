@@ -5,13 +5,14 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1"}
     %link{href: 'http://fonts.googleapis.com/css?family=Montserrat', rel: 'stylesheet', type: 'text/css'}
     %link{href: 'http://fonts.googleapis.com/css?family=Raleway:400,800', rel: 'stylesheet', type: 'text/css'}
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body{class: "dashboard #{controller_name} #{action_name}", data: { 'view-name' => dashboard_data_view_name } }
     = render partial: 'partials/navbar'
     %div{class: controller_name }
-      .new-expense-container.container
+      .container
         %header.row
-          %h3.col-xs-12= translate("header")
+          = image_tag(header_icon_name, alt: data_view_name)
+          %h3= translate("header")
         = yield
