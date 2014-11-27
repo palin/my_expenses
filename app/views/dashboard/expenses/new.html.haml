@@ -7,17 +7,23 @@
     %label.col-sm-2.control-label{for: "expense_price"}= translate('form.price')
     .col-sm-10= f.input :price, label: false, input_html: { class: 'form-control' }
 
-  .category.form-group
-    %label.col-sm-2.control-label{for: "expense_category"}= translate('form.category')
-    .col-sm-10= f.input :category, as: :select, collection: Category.all, label: false, input_html: { class: 'form-control' }
-
   .name.form-group
     %label.col-sm-2.control-label{for: "expense_name"}= translate('form.name')
     .col-sm-10= f.input :name, label: false, input_html: { class: 'form-control' }
 
-  .description.form-group
-    %label.col-sm-2.control-label{for: "expense_description"}= translate('form.description')
-    .col-sm-10= f.input :description, label: false, input_html: { class: 'form-control' }
+  .optional-section
+    .optional-caption
+      = link_to ("#") do
+        %span Optional data
+        %span.glyphicon.glyphicon-chevron-down
+    .optional-fields
+      .category.form-group
+        %label.col-sm-2.control-label{for: "expense_category"}= translate('form.category')
+        .col-sm-10= f.input :category, as: :select, collection: Category.all, label: false, input_html: { class: 'form-control' }
+
+      .description.form-group
+        %label.col-sm-2.control-label{for: "expense_description"}= translate('form.description')
+        .col-sm-10= f.input :description, label: false, input_html: { class: 'form-control' }
 
   .save.form-group
     .col-sm-offset-2.col-sm-10

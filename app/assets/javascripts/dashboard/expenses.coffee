@@ -3,6 +3,7 @@ DE.DashboardExpenses =
     DE.DashboardExpenses.setDefaultDateFormat()
     DE.DashboardExpenses.getLastStoredDate()
     DE.DashboardExpenses.disableSubmit()
+    DE.DashboardExpenses.optionalDataToggle()
 
   setDefaultDateFormat: ->
     $('#expense_payed_at').datepicker(dateFormat: "yy-mm-dd")
@@ -19,3 +20,8 @@ DE.DashboardExpenses =
   getLastStoredDate: ->
     lastDate = DE.SessionStorage.get('last-expense-date')
     $('#expense_payed_at').val(lastDate) if lastDate?
+
+  optionalDataToggle: ->
+    $('.optional-caption a').click ->
+      div = $('.optional-fields')
+      div.slideToggle()

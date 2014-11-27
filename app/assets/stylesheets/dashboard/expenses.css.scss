@@ -1,3 +1,20 @@
 body.dashboard.expenses {
+  .optional-section {
+    .optional-caption {
+      float: right;
+      text-decoration: underline;
 
+      span.glyphicon {
+        top: 3px;
+      }
+    }
+    .optional-fields {
+      display: none;
+    }
+  }
+
+  input[type='submit'] {
+    clear: both;
+    float: left;
+  }
 }
