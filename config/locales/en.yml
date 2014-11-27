@@ -40,8 +40,8 @@ en:
       settings: 'Settings'
       logout: 'Logout'
     expenses:
-      index: 'My expenses'
-      index_group:
+      index:
+        header: 'My expenses'
         table_headers:
           payed_at: 'Payed at'
           price: 'Price'
@@ -53,8 +53,8 @@ en:
           edit: 'Edit'
           delete: 'Delete'
           delete_confirmation: 'Are you sure?'
-      new: 'New expense'
-      new_group:
+      new:
+        header: 'New expense'
         form:
           payed_at: 'Payed at'
           price: 'Price'
@@ -63,7 +63,10 @@ en:
           description: 'Description'
           save: 'Save'
     profiles:
-      edit: 'Edit profile'
-      show: 'Profile'
+      edit:
+        header: 'Edit profile'
+      show:
+        header: 'Profile'
     settings:
-      edit: 'Edit settings'
+      edit:
+        header: 'Edit settings'
