@@ -23,5 +23,11 @@
           %td= ex.description
           %td= ex.category.name if ex.category
           %td= ex.created_at.strftime("%Y-%m-%d %H:%M")
-          %td.edit= link_to "Edit", edit_expense_path(ex), class: 'btn btn-info'
-          %td.delete= link_to "Delete", expense_path(ex), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+          %td.edit
+            = link_to(edit_expense_path(ex), class: 'btn btn-info') do
+              Edit
+              %span.glyphicon.glyphicon-pencil{'aria-hidden' => true}
+          %td.delete
+            = link_to(expense_path(ex), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger') do
+              Delete
+              %span.glyphicon.glyphicon-remove{'aria-hidden' => true}

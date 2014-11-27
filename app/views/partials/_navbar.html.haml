@@ -10,12 +10,12 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.new-expense
-          = link_to "#{image_tag('list_add.png', alt: 'New expense')} New expense".html_safe, new_expense_path
+          = link_to "#{image_tag('dollar-icon.png', alt: 'New expense')} New expense".html_safe, new_expense_path
         %li.your-expenses
-          = link_to "#{image_tag('list.png', alt: 'My expenses')} My expenses".html_safe, expenses_path
+          = link_to "#{image_tag('expenses-list-icon.png', alt: 'My expenses')} My expenses".html_safe, expenses_path
         %li.profile
-          = link_to "#{image_tag("http://graph.facebook.com/#{current_user.uid}/picture", alt: 'Profile')} Profile".html_safe, "profile_path"
+          = link_to "#{image_tag("profile-icon.png", alt: 'Profile')} Profile".html_safe, "profile_path"
         %li.settings
-          = link_to "#{image_tag("settings.png", alt: 'Settings')} Settings".html_safe, "settings_path"
+          = link_to "#{image_tag("settings-icon.png", alt: 'Settings')} Settings".html_safe, "settings_path"
         %li.logout
-          = link_to "#{image_tag('logout.png', alt: 'Logout')} Logout".html_safe, sessions_destroy_path, method: :delete
+          = link_to "#{image_tag('logout-icon.png', alt: 'Logout')} Logout".html_safe, sessions_destroy_path, method: :delete
