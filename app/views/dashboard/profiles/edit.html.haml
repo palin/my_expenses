@@ -1,2 +1,25 @@
-%p
-  = @profile
+= simple_form_for @profile, url: dashboard_profile_path, method: :put, html: { class: 'form-horizontal row col-xs-12' } do |f|
+  %table.table
+    %tr
+      %td.header.col-sm-2.header= "#{translate('name')}"
+      %td
+        %table
+          %tr
+            %td= f.input :name, label: false, input_html: { value: @profile.name, class: 'form-control' }
+          %tr
+            %td.caption Your friends want to recognize you
+    %tr
+      %td.header.col-sm-2= "#{translate('email')}"
+      %td
+        %table
+          %tr
+            %td= f.input :email, label: false, input_html: { value: @profile.email, class: 'form-control' }
+          %tr
+            %td.caption Make sure the email is correct and up-to-date
+    %tr
+      %td.header.col-sm-2= "#{translate('gender')}"
+      %td= f.input :price, label: false, input_html: { value: @profile.gender, class: 'form-control' }
+    %tr
+      %td.col-sm-2
+      %td
+        = f.button :submit, value: translate('update_link'), class: 'btn btn-primary btn-lg'
