@@ -55,8 +55,10 @@ group :test do
   gem 'timecop'
   gem 'rspec-rails'
   gem 'rspec-instafail'
+  gem 'rspec-its'
   gem 'progress_bar'
 end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
