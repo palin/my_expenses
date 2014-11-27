@@ -1,23 +1,49 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  site_name: 'daily expenses'
+  homepage:
+    navbar:
+      dashboard_name: 'Dashboard'
+      login_name: 'log in'
+    title: 'Daily Expenses - be transparent with your expenses'
+    header:
+      h1: 'Be transparent with your expenses'
+      h3_top: 'Bills? Shopping? Holidays?'
+      h3_bottom: 'You can store it all here - for free.'
+    container:
+      table:
+        payed_at: 'Date'
+        name: 'Name of expense'
+        price: 'Cost'
+      sign_up_free_link: 'Sign Up Free'
+      more_link: 'more'
+      more_info_first_section:
+        h1: Keep a history of your expenses
+        ul:
+          li_first: 'provide a date, a cost and a name for each expense'
+          li_second: 'browse and filter your list'
+          li_third: 'see how much you spend every week, month or even a year!'
+      more_info_second_section:
+        h1: "Create group's expenses"
+        ul:
+          li_first: 'invite your friends, house residents, clients'
+          li_second: 'split your expenses'
+          li_third: 'calculate who should pay and how much'
+          li_fourth: 'send them email reminders if you want your money back'
+    footer:
+      rights_reserved: 'All rights reserved for'
+  dashboard:
+    title: 'Daily Expenses - Dashboard'
+    navbar:
+      new_expense: 'New expense'
+      my_expenses: 'My expenses'
+      profile: 'Profile'
+      settings: 'Settings'
+      logout: 'Logout'
+    expenses:
+      index: 'My expenses'
+      new: 'New expense'
+    profiles:
+      edit: 'Edit profile'
+      show: 'Profile'
+    settings:
+      edit: 'Edit settings'
