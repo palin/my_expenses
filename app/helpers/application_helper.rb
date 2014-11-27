@@ -6,4 +6,12 @@ module ApplicationHelper
 
     I18n.t("#{module_part}.#{controller_part}.#{action_name}.#{key}")
   end
+
+  def data_view_name
+    controller_name.humanize
+  end
+
+  def dashboard_data_view_name
+    "Dashboard#{data_view_name}"
+  end
 end
