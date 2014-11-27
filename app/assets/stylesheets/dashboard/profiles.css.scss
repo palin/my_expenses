@@ -1,3 +1,20 @@
 body.dashboard.profiles {
 
+  table table tr:first-child td {
+    font-weight: 800;
+  }
+  td.caption {
+    font-size: 9px;
+    padding-top: 10px;
+  }
+
+  td .btn {
+    margin-top: 15px;
+  }
+
+  &.edit {
+    form {
+      padding-right: 0;
+    }
+  }
 }
