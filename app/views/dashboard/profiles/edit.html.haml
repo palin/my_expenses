@@ -18,7 +18,7 @@
             %td.caption Make sure the email is correct and up-to-date
     %tr
       %td.header.col-sm-2= "#{translate('gender')}"
-      %td= f.input :price, label: false, input_html: { value: @profile.gender, class: 'form-control' }
+      %td= f.input :gender, as: :radio_buttons, collection: ['male', 'female'], label: false, input_html: { value: @profile.gender, class: 'form-control' }
     %tr
       %td.col-sm-2
       %td

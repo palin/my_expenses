@@ -16,5 +16,22 @@ body.dashboard.profiles {
     form {
       padding-right: 0;
     }
+
+    label.radio {
+      float: left;
+      width: 85px;
+      padding: 0 25px;
+      margin-top: -7px;
+
+      input {
+        position: relative;
+        margin: 0 7px;
+        box-shadow: none;
+      }
+
+      input#user_gender_female {
+        margin-left: 13px;
+      }
+    }
   }
 }
