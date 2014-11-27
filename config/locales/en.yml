@@ -42,6 +42,7 @@ en:
     expenses:
       index:
         header: 'My expenses'
+        icon: 'expenses-list-icon.png'
         table_headers:
           payed_at: 'Payed at'
           price: 'Price'
@@ -55,6 +56,7 @@ en:
           delete_confirmation: 'Are you sure?'
       new:
         header: 'New expense'
+        icon: 'expense-icon.png'
         form:
           payed_at: 'Payed at'
           price: 'Price'
@@ -65,8 +67,19 @@ en:
     profiles:
       edit:
         header: 'Edit profile'
+        icon: 'profile-icon.png'
+        update_link: 'Update profile'
+        name: 'Name'
+        email: 'Email'
+        gender: 'Gender'
       show:
         header: 'Profile'
+        icon: 'profile-icon.png'
+        name: 'Name'
+        email: 'Email'
+        gender: 'Gender'
+        edit_link: 'Edit profile'
     settings:
       edit:
         header: 'Edit settings'
+        icon: 'settings-icon.png'
