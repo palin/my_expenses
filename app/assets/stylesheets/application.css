@@ -18,6 +18,6 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-input {
+input, select, textarea {
   font-family: 'Montserrat', sans-serif;
 }
