@@ -1,24 +1,24 @@
 = simple_form_for [:dashboard, @expense], html: { class: 'form-horizontal row col-xs-12' } do |f|
   .payed_at.form-group
-    %label.col-sm-2.control-label{for: "expense_payed_at"} Payed at
+    %label.col-sm-2.control-label{for: "expense_payed_at"}= t('dashboard.expenses.new_group.form.payed_at')
     .col-sm-10= f.input :payed_at, as: :string, placeholder: 'Payed at', label: false, input_html: { value: Date.today.strftime, class: 'form-control' }
 
   .price.form-group
-    %label.col-sm-2.control-label{for: "expense_price"} Price
+    %label.col-sm-2.control-label{for: "expense_price"}= t('dashboard.expenses.new_group.form.price')
     .col-sm-10= f.input :price, label: false, input_html: { class: 'form-control' }
 
   .category.form-group
-    %label.col-sm-2.control-label{for: "expense_category"} Category
+    %label.col-sm-2.control-label{for: "expense_category"}= t('dashboard.expenses.new_group.form.category')
     .col-sm-10= f.input :category, as: :select, collection: Category.all, label: false, input_html: { class: 'form-control' }
 
   .name.form-group
-    %label.col-sm-2.control-label{for: "expense_name"} Name
+    %label.col-sm-2.control-label{for: "expense_name"}= t('dashboard.expenses.new_group.form.name')
     .col-sm-10= f.input :name, label: false, input_html: { class: 'form-control' }
 
   .description.form-group
-    %label.col-sm-2.control-label{for: "expense_description"} Description
+    %label.col-sm-2.control-label{for: "expense_description"}= t('dashboard.expenses.new_group.form.description')
     .col-sm-10= f.input :description, label: false, input_html: { class: 'form-control' }
 
   .save.form-group
     .col-sm-offset-2.col-sm-10
-      = f.button :submit, value: 'Save', class: 'btn btn-primary'
+      = f.button :submit, value: t('dashboard.expenses.new_group.form.save'), class: 'btn btn-primary'
