@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :expenses
+  has_one :settings
 
   acts_as_authentic do |c|
     c.ignore_blank_passwords = true
