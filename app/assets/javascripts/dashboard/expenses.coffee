@@ -1,15 +1,15 @@
-DE.Expenses =
+DE.DashboardExpenses =
   execute: ->
-    DE.Expenses.setDefaultDateFormat()
-    DE.Expenses.getLastStoredDate()
-    DE.Expenses.disableSubmit()
+    DE.DashboardExpenses.setDefaultDateFormat()
+    DE.DashboardExpenses.getLastStoredDate()
+    DE.DashboardExpenses.disableSubmit()
 
   setDefaultDateFormat: ->
     $('#expense_payed_at').datepicker(dateFormat: "yy-mm-dd")
 
   disableSubmit: ->
     $('form').submit ->
-      DE.Expenses.storeLastDate()
+      DE.DashboardExpenses.storeLastDate()
       $('input[type=submit]').attr('disabled', true).val('Saving...')
 
   storeLastDate: ->
