@@ -1,12 +1,17 @@
 !!!
 %html
   %head
-    %title= t("homepage.title")
+    %title= t("dashboard.title")
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1"}
     %link{href: 'http://fonts.googleapis.com/css?family=Montserrat', rel: 'stylesheet', type: 'text/css'}
     %link{href: 'http://fonts.googleapis.com/css?family=Raleway:400,800', rel: 'stylesheet', type: 'text/css'}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body{class: "#{controller_name} #{action_name}", data: { 'view-name' => controller_name.humanize } }
-    = yield
+  %body{class: "dashboard #{controller_name} #{action_name}", data: { 'view-name' => "Dashboard#{controller_name.humanize}" } }
+    = render partial: 'partials/navbar'
+    %div{class: controller_name }
+      .new-expense-container.container
+        %header.row
+          %h3.col-xs-12= t("dashboard.#{controller_name}.#{action_name}")
+        = yield

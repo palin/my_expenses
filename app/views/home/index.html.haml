@@ -1,44 +1,44 @@
 %nav.navbar
-  = link_to 'daily expenses', root_path, class: 'homepage'
+  = link_to t('site_name'), root_path, class: 'homepage'
   - if current_user.present?
-    = link_to 'Dashboard', '/expenses/new', class: 'login'
+    = link_to t('homepage.navbar.dashboard_name'), new_dashboard_expense_path, class: 'login'
   - else
-    = link_to 'log in', '/auth/facebook', class: 'login'
+    = link_to t('homepage.navbar.login_name'), auth_provider_path, class: 'login'
 .main-content
   %header
-    %h1 Be transparent with your expenses
+    %h1= t('homepage.header.h1')
     %h3
-      Bills? Shopping? Holidays?
-      %br You can store it all here - for free.
+      = t('homepage.header.h3_top')
+      %br= t('homepage.header.h3_bottom')
   .new-expenses-container
-    = simple_form_for @expense do |f|
+    = simple_form_for [:dashboard, @expense] do |f|
       %table
         %tr
-          %td= f.input :payed_at, as: :string, placeholder: 'Date', label: false, input_html: { value: '2014-10-27' }
-          %td= f.input :name, placeholder: 'Name of expense', label: false
-          %td= f.input :price, placeholder: 'Cost', label: false
-  = link_to 'Sign Up Free', '/auth/facebook', class: 'btn'
+          %td= f.input :payed_at, as: :string, placeholder: t('homepage.container.table.payed_at'), label: false, input_html: { value: '2014-10-27' }
+          %td= f.input :name, placeholder: t('homepage.container.table.name'), label: false
+          %td= f.input :price, placeholder: t('homepage.container.table.price'), label: false
+  = link_to t('homepage.container.sign_up_free_link'), auth_provider_path, class: 'btn'
   .go-to-next-line{'data-to' => 'more-info-first'}
-    %p more
+    %p= t('homepage.container.more_link')
     = image_tag 'arrow_down.png'
   .more-info-first
-    %h1 Keep a history of your expenses
+    %h1= t('homepage.container.more_info_first_section.h1')
     %ul
-      %li provide a date, a cost and a name for each expense
-      %li browse and filter your list
-      %li see how much you spend every week, month or even a year!
+      %li= t('homepage.container.more_info_first_section.ul.li_first')
+      %li= t('homepage.container.more_info_first_section.ul.li_second')
+      %li= t('homepage.container.more_info_first_section.ul.li_third')
   .go-to-next-line{'data-to' => 'more-info-second'}
-    %p more
+    %p= t('homepage.container.more_link')
     = image_tag 'arrow_down.png'
   .more-info-second
-    %h1 Create group's expenses
+    %h1= t('homepage.container.more_info_second_section.h1')
     %ul
-      %li invite your friends, house residents, clients
-      %li split your expenses
-      %li calculate who should pay and how much
-      %li send them email reminders if you want your money back
+      %li= t('homepage.container.more_info_second_section.ul.li_first')
+      %li= t('homepage.container.more_info_second_section.ul.li_second')
+      %li= t('homepage.container.more_info_second_section.ul.li_third')
+      %li= t('homepage.container.more_info_second_section.ul.li_fourth')
 %footer
   %p
-    All rights reserved for
-    = link_to 'daily expenses', root_path, class: 'homepage'
+    = t('homepage.footer.rights_reserved')
+    = link_to t('site_name'), root_path, class: 'homepage'
     2014

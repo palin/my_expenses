@@ -10,12 +10,12 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.new-expense
-          = link_to "#{image_tag('dollar-icon.png', alt: 'New expense')} New expense".html_safe, new_expense_path
+          = link_to "#{image_tag('dollar-icon.png', alt: 'New expense')} #{t('dashboard.navbar.new_expense')}".html_safe, new_dashboard_expense_path
         %li.your-expenses
-          = link_to "#{image_tag('expenses-list-icon.png', alt: 'My expenses')} My expenses".html_safe, expenses_path
+          = link_to "#{image_tag('expenses-list-icon.png', alt: 'My expenses')} #{t('dashboard.navbar.my_expenses')}".html_safe, dashboard_expenses_path
         %li.profile
-          = link_to "#{image_tag("profile-icon.png", alt: 'Profile')} Profile".html_safe, "profile_path"
+          = link_to "#{image_tag("profile-icon.png", alt: 'Profile')} #{t('dashboard.navbar.profile')}".html_safe, dashboard_profile_path
         %li.settings
-          = link_to "#{image_tag("settings-icon.png", alt: 'Settings')} Settings".html_safe, "settings_path"
+          = link_to "#{image_tag("settings-icon.png", alt: 'Settings')} #{t('dashboard.navbar.settings')}".html_safe, edit_dashboard_settings_path
         %li.logout
-          = link_to "#{image_tag('logout-icon.png', alt: 'Logout')} Logout".html_safe, sessions_destroy_path, method: :delete
+          = link_to "#{image_tag('logout-icon.png', alt: 'Logout')} #{t('dashboard.navbar.logout')}".html_safe, sessions_destroy_path, method: :delete
