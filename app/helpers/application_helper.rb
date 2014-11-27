@@ -14,4 +14,8 @@ module ApplicationHelper
   def dashboard_data_view_name
     "Dashboard#{data_view_name}"
   end
+
+  def header_icon_name
+    translate('icon')
+  end
 end
