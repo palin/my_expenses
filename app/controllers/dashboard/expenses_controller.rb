@@ -1,6 +1,4 @@
-class ExpensesController < ApplicationController
-
-  before_filter :require_logged_user
+class Dashboard::ExpensesController < DashboardController
 
   def index
     @expenses = current_user.expenses
@@ -12,7 +10,7 @@ class ExpensesController < ApplicationController
 
   def create
     if current_user.expenses.create(expense_params)
-      redirect_to new_expense_path
+      redirect_to new_dashboard_expense_path
     else
       render :new
     end
@@ -26,14 +24,14 @@ class ExpensesController < ApplicationController
     @expense = find_expense_object
     @expense.update_attributes(expense_params)
 
-    redirect_to expenses_path, notice: "Expense updated!"
+    redirect_to dashboard_expenses_path, notice: "Expense updated!"
   end
 
   def destroy
     @expense = find_expense_object
     @expense.delete if @expense
 
-    redirect_to expenses_path, notice: "Expense deleted!"
+    redirect_to dashboard_expenses_path, notice: "Expense deleted!"
   end
 
   private
@@ -44,9 +42,5 @@ class ExpensesController < ApplicationController
 
   def find_expense_object
     Expense.find_by(id: params[:id])
-  end
-
-  def require_logged_user
-    redirect_to root_path, alert: "You have to be logged in to see this page!" and return unless current_user.present?
   end
 end

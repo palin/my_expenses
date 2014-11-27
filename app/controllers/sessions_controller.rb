@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     session = UserSession.new(@user)
     session.save
 
-    redirect_to new_expense_path
+    redirect_to new_dashboard_expense_path
   end
 
   def destroy
