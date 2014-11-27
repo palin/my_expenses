@@ -10,7 +10,7 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.new-expense
-          = link_to "#{image_tag('dollar-icon.png', alt: 'New expense')} #{t('dashboard.navbar.new_expense')}".html_safe, new_dashboard_expense_path
+          = link_to "#{image_tag('expense-icon.png', alt: 'New expense')} #{t('dashboard.navbar.new_expense')}".html_safe, new_dashboard_expense_path
         %li.your-expenses
           = link_to "#{image_tag('expenses-list-icon.png', alt: 'My expenses')} #{t('dashboard.navbar.my_expenses')}".html_safe, dashboard_expenses_path
         %li.profile
