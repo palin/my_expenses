@@ -26,10 +26,6 @@ class User < ActiveRecord::Base
   end
 
   def update_data(fb_data, auth)
-    [:name, :gender, :email].each do |att|
-      update_attribute(att, fb_data[att.to_s]) if read_attribute(att) != fb_data[att.to_s]
-    end
-
     update_attribute(:access_token, auth['token']) if access_token != auth['token']
   end
 end
