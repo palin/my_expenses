@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     user
   end
 
-  def self.create_from_fb_data(fb_data, auth)
+  def self.create_from_fb_data(fb_data)
     self.create(
       name: fb_data["name"],
       uid: fb_data["id"],
