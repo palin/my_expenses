@@ -83,3 +83,8 @@ en:
       edit:
         header: 'Edit settings'
         icon: 'settings-icon.png'
+
+  mailers:
+    user_mailer:
+      welcome_email:
+        subject: 'Welcome to Daily Expenses'
