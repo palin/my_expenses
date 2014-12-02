@@ -20,14 +20,25 @@ DE.Home =
     [oneMonthAgo, twoDaysAgo, yesterday, today]
 
   names: ->
-    ['Trip to Thailand', 'Gas bill', 'House cleaning', 'New TV']
+    ['Train ticket', 'Burger and chips', 'Visit in Grand Palace', 'Trip out of town']
 
   prices: ->
-    ['1300', '190.75', '30', '349.99']
+    ['6.49', '9.95', '30', '45']
+
+  imageClasses: ->
+    ['train-ticket', 'burger-and-chips', 'visit-in-grand-palace', 'trip-out-of-town']
+
+  removeImageClasses: (counter)->
+    $('.top-slider-bg').removeClass(DE.Home.imageClasses().join(' ')).fadeOut('fast', -> DE.Home.addImageClass(counter))
+
+  addImageClass: (counter)->
+    $('.top-slider-bg').addClass(DE.Home.imageClasses()[counter]).fadeIn('fast')
 
   examplesLoop: (counter)->
-    counter = 0 if counter > 2
+    counter = 0 if counter > 3
     DE.Home.clearInputs()
+    DE.Home.removeImageClasses(counter)
+
     window.setTimeout ->
       $('#expense_payed_at').typetype(DE.Home.dates()[counter], {
         e: 0
@@ -42,7 +53,7 @@ DE.Home =
               window.setTimeout(->
                 DE.Home.clearInputs()
                 DE.Home.examplesLoop(counter + 1)
-              , 1000)
+              , 2000)
             });
           });
         });

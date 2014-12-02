@@ -5,38 +5,40 @@
   - else
     = link_to t('homepage.navbar.login_name'), auth_provider_path, class: 'login'
 .main-content
-  %header
-    %h1= t('homepage.header.h1')
-    %h3
-      = t('homepage.header.h3_top')
-      %br= t('homepage.header.h3_bottom')
-  .new-expenses-container
-    = simple_form_for [:dashboard, @expense] do |f|
-      %table
-        %tr
-          %td= f.input :payed_at, as: :string, placeholder: t('homepage.container.table.payed_at'), label: false, input_html: { value: '2014-10-27' }
-          %td= f.input :name, placeholder: t('homepage.container.table.name'), label: false
-          %td= f.input :price, placeholder: t('homepage.container.table.price'), label: false
-  = link_to t('homepage.container.sign_up_free_link'), auth_provider_path, class: 'btn'
+  .top-slider
+    .top-slider-bg
+    %header
+      %h1= t('homepage.header.h1')
+      %h3
+        = t('homepage.header.h3_top')
+        %br= t('homepage.header.h3_bottom')
+    .new-expenses-container
+      = simple_form_for [:dashboard, @expense] do |f|
+        %table
+          %tr
+            %td= f.input :payed_at, as: :string, placeholder: t('homepage.container.table.payed_at'), label: false, input_html: { value: '2014-10-27' }
+            %td= f.input :name, placeholder: t('homepage.container.table.name'), label: false
+            %td= f.input :price, placeholder: t('homepage.container.table.price'), label: false
+    = link_to t('homepage.container.sign_up_free_link'), auth_provider_path, class: 'btn'
   .go-to-next-line{'data-to' => 'more-info-first'}
     %p= t('homepage.container.more_link')
     = image_tag 'arrow_down.png'
   .more-info-first
     %h1= t('homepage.container.more_info_first_section.h1')
     %ul
-      %li= t('homepage.container.more_info_first_section.ul.li_first')
-      %li= t('homepage.container.more_info_first_section.ul.li_second')
-      %li= t('homepage.container.more_info_first_section.ul.li_third')
+      %li= t('homepage.container.more_info_first_section.ul.li_first').html_safe
+      %li= t('homepage.container.more_info_first_section.ul.li_second').html_safe
+      %li= t('homepage.container.more_info_first_section.ul.li_third').html_safe
   .go-to-next-line{'data-to' => 'more-info-second'}
     %p= t('homepage.container.more_link')
     = image_tag 'arrow_down.png'
   .more-info-second
     %h1= t('homepage.container.more_info_second_section.h1')
     %ul
-      %li= t('homepage.container.more_info_second_section.ul.li_first')
-      %li= t('homepage.container.more_info_second_section.ul.li_second')
-      %li= t('homepage.container.more_info_second_section.ul.li_third')
-      %li= t('homepage.container.more_info_second_section.ul.li_fourth')
+      %li= t('homepage.container.more_info_second_section.ul.li_first').html_safe
+      %li= t('homepage.container.more_info_second_section.ul.li_second').html_safe
+      %li= t('homepage.container.more_info_second_section.ul.li_third').html_safe
+      %li= t('homepage.container.more_info_second_section.ul.li_fourth').html_safe
 %footer
   %p
     = t('homepage.footer.rights_reserved')

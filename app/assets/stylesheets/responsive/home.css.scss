@@ -12,27 +12,55 @@
       }
     }
     .main-content {
+
+      .top-slider-bg {
+        background-position: 0px -200px;
+      }
+
+      .train-ticket {
+        background: image-url('train-ticket.jpg') no-repeat;
+        background-size: cover;
+        background-position: 0px -365px;
+      }
+
+      .burger-and-chips {
+        background: image-url('burger-and-chips.jpg') no-repeat;
+        background-size: cover;
+        background-position: 0px -217px;
+      }
+
+      .visit-in-grand-palace {
+        background: image-url('visit-in-grand-palace.jpg') no-repeat;
+        background-size: cover;
+        background-position: 0px -415px;
+      }
+
+      .trip-out-of-town {
+        background: image-url('trip-to-scandinavia.jpg') no-repeat;
+        background-size: cover;
+        background-position: 0px -34px;
+      }
       header {
         padding: 30px 0;
       }
       h1 {
-        font-size: 100px;
+        font-size: 50px;
         line-height: 90px;
       }
       h3 {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 42px;
       }
-      h4 {
-        margin-left: 368px;
-        font-size: 18px;
-      }
+    }
+
+    .go-to-next-line {
+      margin: 15px 0;
     }
     .new-expenses-container {
       margin-top: 0px;
       margin-bottom: 30px;
       padding: 20px 0;
-      background: #ddd;
+      background: rgba(0, 0, 0, 0.3);
       border-top: 2px solid #ccc;
       border-bottom: 2px solid #ccc;
 
@@ -58,6 +86,13 @@
         }
       }
     }
+
+    .more-info-first, .more-info-second {
+      ul {
+        position: relative;
+        left: calc(50% - 250px);
+      }
+    }
   }
 }
 
@@ -65,7 +100,6 @@
   body.home {
     .main-content {
       h1 {
-        font-size: 55px;
         line-height: 60px;
       }
     }

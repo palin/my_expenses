@@ -6,9 +6,9 @@ en:
       login_name: 'log in'
     title: 'Daily Expenses - be transparent with your expenses'
     header:
-      h1: 'Be transparent with your expenses'
+      h1: 'Daily Expenses'
       h3_top: 'Bills? Shopping? Holidays?'
-      h3_bottom: 'You can store it all here - for free.'
+      h3_bottom: 'Be transparent with your expenses'
     container:
       table:
         payed_at: 'Date'
@@ -19,16 +19,16 @@ en:
       more_info_first_section:
         h1: Keep a history of your expenses
         ul:
-          li_first: 'provide a date, a cost and a name for each expense'
-          li_second: 'browse and filter your list'
-          li_third: 'see how much you spend every week, month or even a year!'
+          li_first: '<b>store</b> a date, cost and name for each expense'
+          li_second: '<b>browse</b> and <b>filter</b> your list'
+          li_third: '<b>discover</b> how much you spend every week, month or even a year!'
       more_info_second_section:
         h1: "Create group's expenses"
         ul:
-          li_first: 'invite your friends, house residents, clients'
-          li_second: 'split your expenses'
-          li_third: 'calculate who should pay and how much'
-          li_fourth: 'send them email reminders if you want your money back'
+          li_first: '<b>invite</b> your friends, house residents, clients'
+          li_second: '<b>split</b> your expenses between a group'
+          li_third: '<b>calculate</b> who should pay and how much'
+          li_fourth: '<b>send</b> group email reminders'
     footer:
       rights_reserved: 'All rights reserved for'
   dashboard:
